@@ -1,3 +1,9 @@
+from random import randint
+
+# Hero Stats
+hero_health = 100
+hero_inventory = []
+
 # Choosing what the prompt will look like
 prompt = ">> "
 
@@ -8,7 +14,6 @@ def entrance_room():
     # and one door to the south leading to the exit of the dungeon
     print "\n\n\n"
     print "Location: Entrance Room"
-    #print "Directions: West and East and South"
 
     # Accept user commands and take an action
     print "\n\n\n"
@@ -33,7 +38,6 @@ def outside_dungeon():
     #but if you leave the dungeon without enough gold you are a coward
     print "\n\n\n"
     print "Location: Outside Dungeon"
-    #print "Directions: North"
 
     # Accept user commands and take an action
     print "\n\n\n"
@@ -51,19 +55,27 @@ def bear_room():
     #If you come into this room without a torch it will eventually be too dark
     #doors to north to bbg or east to entrance
     #if you defeat bear you get gold, if not you die
-    print "\n\n\n"
-    print "Location: Bear Room"
-    #print "Directions: North and East"
-
+    # Add a bear with health that fights, user needs health too
     # Accept user commands and take an action
     print "\n\n\n"
-    print "Options: Go North, Go East"
+    print "Location: Bear Room"
+    print "Options: Go North, Go East, Check Health, Check Inventory"
+
     hero_command = raw_input(prompt)
+
     if hero_command == "Go North":
         bbg_room()
 
     elif hero_command == "Go East":
         entrance_room()
+
+    elif hero_command == "Check Health":
+        print "\n\n\nHero Health:", hero_health
+        bear_room()
+
+    elif hero_command == "Check Inventory":
+        print "\n\n\nHero Inventory", hero_inventory
+        bear_room()
 
     #elif all the other options
 
@@ -74,7 +86,6 @@ def skeleton_room():
     #If you come into this room without a torch it will eventually be too dark
     print "\n\n\n"
     print "Location: Skeleton Room"
-    #print "Directions: North and West"
 
     # Accept user commands and take an action
     print "\n\n\n"
@@ -95,7 +106,6 @@ def bbg_room():
     #If you come into this room without a torch it will eventually be too dark
     print "\n\n\n"
     print "Location: BBG Room"
-    #print "Directions: West and East"
 
     # Accept user commands and take an action
     print "\n\n\n"
