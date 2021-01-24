@@ -1,5 +1,4 @@
 # Choosing what the prompt will look like
-
 prompt = ">> "
 
 # Creating rooms that have a number of doors leading to other doors. Each room is a functions
