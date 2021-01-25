@@ -1,7 +1,3 @@
-# Hero Stats
-hero_health = 100
-hero_inventory = []
-
 # Choosing what the prompt will look like
 prompt = ">> "
 
