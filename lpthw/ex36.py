@@ -1,5 +1,3 @@
-from random import randint
-
 # Hero Stats
 hero_health = 100
 hero_inventory = []
