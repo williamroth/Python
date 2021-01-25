@@ -4,6 +4,7 @@ print "Your Inventory: %s" % inventory
 items_list = ["nunchucks", "sword", "milkshake", "gold brick"]
 
 while items_list:
+    print "whats in the room? %r" % items_list
     command = raw_input(">> ")
     if command in items_list:
         inventory.append(command)
