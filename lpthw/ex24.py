@@ -26,7 +26,7 @@ def secret_formula(started):
 
 
 start_point = 10000
-beans, jars, crates =secret_formula(start_point)
+beans, jars, crates = secret_formula(start_point)
 
 print "With a starting point of: %d" % start_point
 print "We'd have %d beans, %d jars, %d crates." % (beans, jars, crates)
