@@ -4,11 +4,12 @@ from sys import argv
 
 script, hero_name = argv
 
+
 cursor = "==|======> "
 health = 40
 bear_health = 10
 skeleton_health = 10
-bbeg_health = 22
+bbeg_health = 25
 inventory = ['POCKET LINT']
 entrance_room_items = ['SWORD', 'NUNCHUCKS']
 bbeg_items = ['TREASURE']
@@ -31,7 +32,7 @@ def bear_room(health, inventory, bear_health, skeleton_health, bbeg_health):
         elif command == "FIGHT BEAR":
 
             while bear_health > 0:
-                if "SWORD" in inventory or "NUNCHUCKS" in inventory:
+                if "SWORD" or "NUNCHUCKS" in inventory:
                     attack = randint(2, 5)
                     print "\nAttacking bear for %d damage!" % attack
                     bear_health -= attack
@@ -91,7 +92,7 @@ def bbeg_room(health, inventory, bear_health, skeleton_health, bbeg_health):
         elif command == "FIGHT BBEG":
 
             while bbeg_health > 0:
-                if "SWORD" in inventory or "NUNCHUCKS" in inventory:
+                if "SWORD" or "NUNCHUCKS" in inventory:
                     attack = randint(2, 5)
                     print "\nAttacking BBEG for %d damage!" % attack
                     bbeg_health -= attack
@@ -141,7 +142,7 @@ def skeleton_room(health, inventory, bear_health, skeleton_health, bbeg_health):
         elif command == "FIGHT SKELETON":
 
             while skeleton_health > 0:
-                if "SWORD" in inventory or "NUNCHUCKS" in inventory:
+                if "SWORD" or "NUNCHUCKS" in inventory:
                     attack = randint(2, 5)
                     print "\nAttacking skeleton for %d damage!" % attack
                     skeleton_health -= attack
